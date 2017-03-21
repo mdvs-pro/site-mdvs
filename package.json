@@ -1,0 +1,35 @@
+{
+  "name": "mdvs.pro",
+  "version": "0.0.1",
+  "description": "landing for mdvs.pro",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuchiko/site-mdvs.git"
+  },
+  "keywords": [
+    "corporative",
+    "mdvs",
+    "mdvs-project",
+    "landing"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprites": "^4.0.2"
+  },
+  "author": "yuchi.mdvs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuchiko/site-mdvs/issues"
+  },
+  "homepage": "https://github.com/yuchiko/site-mdvs#readme"
+}

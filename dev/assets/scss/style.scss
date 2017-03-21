@@ -1,0 +1,32 @@
+/*!
+ * -------------------------------------
+Theme Name: mdvs.pro
+Theme URI: mdvs.pro
+Author: yuchi.mdvs
+Author URI: mdvs.pro
+Description: Stylish news platform
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: mdvs.pro
+Tags:
+ * -------------------------------------
+ */
+
+
+// Base Style
+@import "base/_variables";
+@import "base/_reset";
+@import "base/_mixin";
+// @import "base/_fonts";
+
+@import "base/_extend";
+@import "base/_function";
+
+//	Style
+@import "_some";
+@import "_btnsIcons";
+@import "_header";
+@import "_footer";
+@import "_libs";
+@import "_adaptive";
