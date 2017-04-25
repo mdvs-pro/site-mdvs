@@ -89,6 +89,7 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task('default', ['html:dev', 'css:dev', 'browser-sync'], function () {
+	gulp.watch(folders.src.html, ['bs-reload']);
 	gulp.watch(folders.src.scss, ['css:dev']);
 	gulp.watch(folders.src.partials, ['html:dev']);
 	gulp.watch(folders.src.js, ['bs-reload']);

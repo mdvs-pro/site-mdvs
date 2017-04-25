@@ -6,12 +6,16 @@ html {
 }
 
 body {
-	background: #f7f7f7;
+	background: $bgcolor;
 	@include font-size(14.8px);
 	font-family: $primary_font;
-	font-weight: 100;
+	font-weight: 800;
 	line-height: 2.4rem;
 	color: $primary_color;
+}
+
+.body__wrapper {
+	height: 100vh;
 }
 
 h1, .h1 {
@@ -63,4 +67,41 @@ strong, b, .strong {
 .img--responsive {
 	display: block;
 	width: 100%;
+}
+
+.logo {
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 0rem;
+	width: 95%;
+	height: 100%;
+	margin: auto;
+
+	&__l {
+
+		img {
+			width: 100%;
+		}
+
+		&--w25 {
+			flex: 0 0 25%;
+		}
+
+		&--w50 {
+			flex: 0 0 50%;
+		}
+		
+		&--d {
+			transform: translateX(15%);
+		}
+	}
+
+	&__bi {
+		height: 15rem;
+	}
+
+	&__soc {
+		display: flex;
+		justify-content: space-between;
+	}
 }
