@@ -12,6 +12,65 @@ body {
 	font-weight: 800;
 	line-height: 2.4rem;
 	color: $primary_color;
+	position: relative; 
+
+  &.is-pagetransition .loader-overlay::before {
+    height: 250%; 
+	}
+
+  &.is-pagetransition .loader-overlay::after {
+    opacity: 1; 
+	}
+
+  &.is-pagetransitionend .loader-overlay::before,
+	&.is-pagetransitionend .loader-overlay::after {
+    opacity: 0;
+	}
+}
+
+.loader-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+
+  &::before {
+    content: '';
+    width: 200%;
+    height: 0;
+    background-color: $bgcolor;
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 900;
+    -webkit-transform: translate(-50%, -50%) rotate(-25deg);
+            transform: translate(-50%, -50%) rotate(-25deg);
+    transition: height 0.9s cubic-bezier(0.55, 0.085, 0, 0.99); 
+	}
+
+  &::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 50px;
+    background-image: url(assets/img/mdvs.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 50vh;
+    z-index: 901;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    transition: opacity 0.9s cubic-bezier(0.55, 0.085, 0, 0.99);
+	}
 }
 
 .body__wrapper {
@@ -161,6 +220,17 @@ strong, b, .strong {
 
 .js-d {
 	transform-origin: center center;
+}
+
+.input {
+		display: block;
+    -webkit-appearance: none;
+    border: none;
+    line-height: 2;
+    font-size: 1.6rem;
+    padding: 1rem;
+    width: 100%;
+    background: #d0d0d0;
 }
 
 .logo__l {

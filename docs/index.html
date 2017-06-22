@@ -15,7 +15,7 @@
 	<script src="assets/js/vendor/modernizr.custom.js"></script>
 </head>
 
-<body>
+<body class="is-pagetransition">
 	<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -81,19 +81,20 @@
 			</div>
 		</div>
 	</div>
+	<div class="loader-overlay"></div>
 
 	<div class="md-modal md-effect-17" id="modal-1">
 		<div class="md-content">
-			<h3>Apply your Project</h3>
+			<h3 class="md__heading">Apply your Project</h3>
 			<div class="md-body">
 				<form action="apply.php" method="POST">
-					<div class="input-group">
-						<label class="input__label" for="client-name">Your name</label>	
+					<div class="input-group">					
 						<input class="input" type="text" name="client-name" id="client-name">
+						<span class="e-placeholder">Your name</span>
 					</div>
 					<div class="input-group">
-						<label class="input__label" for="client-mail">Your mail</label>	
 						<input class="input" type="text" name="client-mail" id="client-mail">
+						<span class="e-placeholder">E-mail</span>
 					</div>
 				</form>
 			</div>
