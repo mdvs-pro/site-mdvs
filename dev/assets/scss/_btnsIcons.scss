@@ -2,13 +2,12 @@
 	@extend %btn;
 	background: $secondary_color;
 	color: #fff;
-	font-size: 1.1rem;
-	line-height: 3rem;
+	font-size: 1.48rem;
+	line-height: 2.4rem;
 	font-weight: 900;
 	text-transform: uppercase;
 	padding: 1rem 5.4rem;
 	border-radius: 9.39rem;
-	margin-bottom: 2rem;
 	box-shadow: inset 0 0 0 0.1rem $secondary_color;
 	@include animation(box-shadow, background, color);
 
@@ -22,5 +21,15 @@
 	&--nobtn {
 		background: none;
 		border: none;
+		padding: 0;
+		text-transform: none;
+		border-radius: 0;
+		box-shadow: none;
+		border-bottom: 2px solid #F0D955;
+
+		&:hover, &:focus {
+			color: #F0D955;
+			box-shadow: none;
+		}
 	}
 }

@@ -56,8 +56,15 @@ p {
 }
 
 a {
-  color: $secondary_color;
-  text-decoration: underline;
+  color: $color_white;
+  text-decoration: none;
+}
+
+.link {
+
+	&--underline {
+		
+	}
 }
 
 strong, b, .strong {
@@ -76,6 +83,7 @@ strong, b, .strong {
 	width: 95%;
 	height: 100%;
 	margin: auto;
+	margin-right: 1rem;
 
 	&__l {
 
@@ -97,11 +105,75 @@ strong, b, .strong {
 	}
 
 	&__bi {
-		height: 15rem;
+		transform: translate(-0.25rem, -4.6rem);
+		height: 9.3rem;
+
+		&--sl {
+			display: flex;
+			align-items: flex-end;
+		}
+
+		&--s {
+			text-align: center;
+			justify-content: center;
+			margin-right: 20%;
+		}
+
+		&--tt {
+			transform: translateY(-4.8rem);
+		}
+
+		&--s {
+			margin-left: 0%;
+			margin-right: 20%;
+			text-align: center;
+		}
+
+		&.logo__hl span {
+			font-size: 4.7rem;
+			line-height: 1;
+			color: $color_white;
+		}
 	}
 
 	&__soc {
 		display: flex;
 		justify-content: space-between;
 	}
+	
+}
+
+
+#letter-m:hover {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 6s linear forwards;
+    animation: dash 6s linear forwards
+}
+
+.yclr {
+	fill: #F0D955;
+}
+
+.tclr {
+	fill: $bgcolor;
+}
+
+.js-d {
+	transform-origin: center center;
+}
+
+.logo__l {
+	overflow: hidden;
+
+	svg {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0
+    }
 }
