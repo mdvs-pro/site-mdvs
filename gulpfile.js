@@ -40,12 +40,12 @@ var folders = {
 		fonts: './dev/assets/fonts/'
 	},
 	release: {
-		root: './release/',
-		js: './release/assets/js/',
-		scss: './release/assets/css/',
-		css: './release/assets/css/',
-		img: './release/assets/img/',
-		fonts: './release/assets/fonts/'
+		root: './docs/',
+		js: './docs/assets/js/',
+		scss: './docs/assets/css/',
+		css: './docs/assets/css/',
+		img: './docs/assets/img/',
+		fonts: './docs/assets/fonts/'
 	}
 };
 
@@ -76,6 +76,29 @@ gulp.task('css:dev', function() {
 		.pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('html:release', function () {
+	return gulp.src(folders.src.html)
+		.pipe(rigger())
+		.pipe(gulp.dest(folders.release.root))
+});
+
+gulp.task('css:release', function() {
+	return gulp.src(folders.src.scss)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+		.pipe(gulp.dest(folders.release.root))
+});
+
+gulp.task('js:release', function() {
+	return gulp.src('./dev/assets/js/**/*.js')
+		.pipe(gulp.dest(folders.release.js))
+});
+
+gulp.task('fonts:release', function() {
+	return gulp.src(folders.src.fonts)
+		.pipe(gulp.dest(folders.release.fonts))
+});
+
 gulp.task('browser-sync', function() {
 	browserSync.init(null, {
 		server: {
@@ -95,4 +118,4 @@ gulp.task('default', ['html:dev', 'css:dev', 'browser-sync'], function () {
 	gulp.watch(folders.src.js, ['bs-reload']);
 });
 
-gulp.task('release', ['img:release']);
+gulp.task('release', ['html:release', 'css:release', 'img:release', 'js:release', 'fonts:release']);
