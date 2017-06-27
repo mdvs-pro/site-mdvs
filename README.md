@@ -1,1 +1,1 @@
-[DEMO](https://yuchiko.github.io/mdvs.pro)
+[Demo Page](https://yuchiko.github.io/site-mdvs)
